@@ -36,8 +36,6 @@ body {
     padding-top: 70px; 
 }
 
-
-
 header {
     position: fixed;
     top: 0;
@@ -45,8 +43,8 @@ header {
     right: 0;
     z-index: 1000;
     transition: background-color 0.3s ease;
-    padding: 0 170px;
-    background-color: #ffffff;
+    padding: 0 30px;
+    background-color: white;
 }
 
 header.scrolled {
@@ -60,7 +58,6 @@ nav {
     align-items: center;
     padding: 1rem 0;
     position: relative;
-  
 }
 
 nav ul {
@@ -159,15 +156,14 @@ nav ul li a:hover::after {
     .hamburger {
         display: block;
     }
-
-    
 }
+
 .projects {
     padding: 2em 0;
 }
 
 .projects h1 {
-    font-size: 2.2em; /* Adjusted font size */
+    font-size: 2.2em;
     color: var(--primary-color);
     margin-bottom: 0.5em;
 }
@@ -181,7 +177,7 @@ nav ul li a:hover::after {
 .project-grid {
     display: flex;
     flex-direction: column;
-    gap: 2em; /* Adjusted gap */
+    gap: 2em;
 }
 
 .project-item {
@@ -190,9 +186,9 @@ nav ul li a:hover::after {
     border-radius: 10px;
     overflow: hidden;
     transition: box-shadow 0.3s ease;
-    align-items: center; /* Center items vertically */
+    align-items: center;
     opacity: 0;
-    transform: translateX(-100px); /* Start from the left side */
+    transform: translateX(-100px);
     animation: slideInFromSide 0.6s ease-out forwards;
 }
 
@@ -200,7 +196,6 @@ nav ul li a:hover::after {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Apply a delay based on the item's position */
 .project-item:nth-child(1) {
     animation-delay: 0s;
 }
@@ -215,8 +210,8 @@ nav ul li a:hover::after {
 
 .project-img {
     flex: 1;
-    max-width: 40%; /* Adjusted max-width */
-    display: flex; /* Center the image within its container */
+    max-width: 40%;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -235,7 +230,7 @@ nav ul li a:hover::after {
 }
 
 .project-info h4 {
-    font-size: 1.1em; /* Adjusted font size */
+    font-size: 1.1em;
     color: var(--primary-color);
     margin-bottom: 0.5em;
 }
@@ -297,10 +292,10 @@ nav ul li a:hover::after {
     color: var(--font-color);
 }
 
-/* Footer Styles */
 footer {
     color: #000000;
     margin-top: 15em;
+    padding-bottom: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -325,11 +320,10 @@ footer i:hover {
     color: #979797;
 }
 
-/* Keyframes for animations */
 @keyframes slideInFromSide {
     from {
         opacity: 0;
-        transform: translateX(-100px); /* Adjust to translate from the left */
+        transform: translateX(-100px);
     }
     to {
         opacity: 1;
@@ -337,9 +331,8 @@ footer i:hover {
     }
 }
 
-/* For right-side sliding effect */
 .project-item.right {
-    transform: translateX(100px); /* Start from the right side */
+    transform: translateX(100px);
 }
 
 .project-item.right.visible {
@@ -349,7 +342,7 @@ footer i:hover {
 @keyframes slideInFromSideRight {
     from {
         opacity: 0;
-        transform: translateX(100px); /* Adjust to translate from the right */
+        transform: translateX(100px);
     }
     to {
         opacity: 1;
@@ -357,11 +350,9 @@ footer i:hover {
     }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     header{
         padding: 10px;
-
     }
     .project-grid {
         gap: 2em;
@@ -385,7 +376,6 @@ footer i:hover {
 }
 
 @media (max-width: 480px) {
-  
     .projects {
         padding: 1em 0;
     }
