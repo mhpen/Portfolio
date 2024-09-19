@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
@@ -22,6 +22,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .wrap {
     max-width: 1200px;
     margin: 2em auto;
@@ -35,10 +36,9 @@ header {
     right: 0;
     z-index: 1000;
     transition: background-color 0.3s ease;
-    padding: 0 250px;
-    background-color: #ffffff;
+    padding: 0 30px;
+    background-color: white;
 }
-
 
 header.scrolled {
     background-color: rgba(255, 255, 255, 0.8);
@@ -51,7 +51,6 @@ nav {
     align-items: center;
     padding: 1rem 0;
     position: relative;
-   
 }
 
 nav ul {
@@ -67,6 +66,7 @@ nav ul li a {
     text-decoration: none;
     color: var(--font-color);
     font-weight: 300;
+    font-size: 14px;
     transition: all 0.3s ease;
     position: relative;
 }
@@ -98,7 +98,8 @@ nav ul li a:hover::after {
     cursor: pointer;
 }
 
-.hamburger div {
+.hamburger span {
+    display: block;
     width: 25px;
     height: 3px;
     background-color: var(--font-color);
@@ -106,37 +107,20 @@ nav ul li a:hover::after {
     transition: all 0.3s ease;
 }
 
-/* Menu Toggle Styles */
-.menu-toggle:checked + .hamburger div:nth-child(1) {
+.menu-toggle:checked + .hamburger span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
 
-.menu-toggle:checked + .hamburger div:nth-child(2) {
+.menu-toggle:checked + .hamburger span:nth-child(2) {
     opacity: 0;
 }
 
-.menu-toggle:checked + .hamburger div:nth-child(3) {
+.menu-toggle:checked + .hamburger span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
 }
 
 .menu-toggle:checked ~ ul {
     right: 0;
-}
-
-.menu-toggle:checked ~ .menu-backdrop {
-    display: block;
-}
-
-.menu-backdrop {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    z-index: 999;
 }
 
 @media screen and (max-width: 768px) {
@@ -170,6 +154,7 @@ nav ul li a:hover::after {
         display: block;
     }
 }
+
 .about-me, .skills, .tech-stack {
     margin: 60px 0;
 }
@@ -199,6 +184,38 @@ h1, .section-title {
     height: auto;
     border-radius: 10px;
     object-fit: cover;
+}
+
+footer {
+    color: #000000;
+    padding: 20px;
+    margin-top: 15em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.contact {
+    font-size: clamp(30px, 5vw, 50px);
+}
+
+footer i {
+    font-size: clamp(16px, 3vw, 24px);
+    margin: 0 10px;
+    color: var(--font-color);
+    transition: all 0.2s;
+}
+
+footer i:hover {
+    color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+.cpr {
+    font-size: clamp(8px, 2vw, 12px);
+    color: #979797;
 }
 
 @media (min-width: 768px) {
@@ -260,6 +277,7 @@ h1, .section-title {
 .skill-desc {
     font-size: 0.9em;
 }
+
 .tags {
     background-color: var(--secondary-color);
     color: var(--primary-color);
@@ -267,37 +285,6 @@ h1, .section-title {
     border-radius: 20px;
     font-size: 0.9em;
     margin-top: 10px;
-}
-
-footer {
-    color: #000000;
-    margin-top: 15em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-size: 0.5em;
-}
-
-.contact {
-    font-size: 1.5em;
-}
-
-footer i {
-    font-size: 20px;
-    margin: 0 10px;
-    color: var(--font-color);
-    transition: all 0.2s;
-}
-
-footer i:hover {
-    color: var(--primary-color);
-    font-size: 25px;
-}
-
-.cpr {
-    font-size: 0em;
-    color: #979797;
 }
 
 @media (min-width: 768px) {
@@ -406,11 +393,13 @@ footer i:hover {
         margin: 2em 10rem;
     }
 }
+
 @media (min-width: 1200px) {
     .wrap {
         margin: 2em 15rem;
     }
 }
+
 @media (max-width: 640px) {
     .wrap {
         margin: 1em;
